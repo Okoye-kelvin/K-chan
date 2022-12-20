@@ -1,0 +1,45 @@
+#include <iostream>
+#include <math.h>
+using namespace std;
+int A,B,C,D;
+void man()
+{
+
+   cout<<"input value of A"<<"\n";
+   cin>>A;
+
+
+   cout<<"input value of B "<<endl;
+   cin>>B;
+
+   cout<<"input value of C "<<endl;
+   cin>>C;
+   D = (pow(B,2) - 4)*A;{
+   cout <<"D = "<<D<<"\n";
+   }
+    if (A == 0){
+   cout<<"This is a Linear Equation"<<endl;
+   }
+    else if  (D < 0){
+        cout<<"Equation has no root mean";
+    }
+    else if (D > 0)
+    {
+     cout<<"X = " << (-B - sqrt(D))/2*A<<"\n";
+    cout<<"Y = "<< (-B + sqrt(D))/2*A<<"\n";
+
+    }
+
+       else if (D == 0);{
+        cout<<"Z = "<< -B/2*A;
+    }
+
+       }
+
+
+int main()
+ {
+     cout<<"quadratic equation\n";
+
+     man();
+ }
