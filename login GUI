@@ -1,0 +1,30 @@
+from tkinter import *
+
+
+def password():
+
+    newWindow = Toplevel()
+    Label(newWindow,text="Create Account",).grid(row=1, column=3)
+    Label(newWindow, text="User-ID").grid(row=3, column=1)
+    userID = Entry(newWindow, )
+    userID.grid(row=3, column=5)
+
+    Label(newWindow, text="Emai_Address",).grid(row=4, column=1)
+    emailAddress = Entry(newWindow)
+    emailAddress.grid(row=4, column= 5)
+
+    Label(newWindow, text="Password").grid(row=6, column=1)
+    password = Entry(newWindow)
+    password.grid(row=6, column=5)
+
+    Button(newWindow, text="Enter",).grid(row=7, column=5)
+
+
+windows = Tk()
+windows.title("Kteck Global")
+windows.configure(bg="skyblue")
+Label(windows, text="welcome to kteck, kindly input  your details to be accessed!!", font="algerian  20",
+      fg="midnightblue").grid(row=0, column=0)
+Button(windows, text="Sign_In to Kteck ", command=password, bg="midnightblue", fg="white", font="algerian  15", width=50,
+       height=15).grid(row=1, column=0)
+windows.mainloop()
