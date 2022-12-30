@@ -1,0 +1,16 @@
+#include <iostream>
+using namespace std;
+
+int main(){
+	cout<<"\t \t  **Finding the Factorial of a given value**"<<endl;
+	long num, i, num_fact = 1;
+	cout<<"Enter the given value to be factorize\n ";
+	cin>>num;
+	for(i = num; i >= 1; i--)
+	
+		num_fact = num_fact * i;
+		cout<<"Factorial = " <<num_fact;
+
+	return 0;
+}
+
