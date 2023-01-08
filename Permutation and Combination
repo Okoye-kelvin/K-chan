@@ -1,0 +1,25 @@
+#include <iostream>
+using namespace std;
+int num(int n) {
+   if (n == 0 || n == 1)
+   return 1;
+   else
+   return n * num(n - 1);
+}
+int main() {
+	cout<<"			*.............PERMUTATION AND COMBINATION...............*"<<endl;
+	cout<<"	\nMathematically Expressed; \n"<<endl;
+	cout<<"	*PERMUTATION :  nPr = n!/(n - r)! \n "<<endl;
+    cout<<"	*COMBINATION :  nCr = n!/(n - r)! r!"<<endl;
+   int n, r;
+   cout<<"\n Input n = "<<endl;
+   cin>>n;
+   cout<<"\n Input r = "<<endl;
+   cin>>r;
+   int permutation = num(n) / num(n-r);
+   cout <<"\n	Permutation = " << permutation;
+   int combination = num(n) / (num(r) * num(n-r));
+   cout << "\n	Combination = " << combination;
+   cout<<"\n\n					...Good luck"<<endl;
+   return 0;
+}
