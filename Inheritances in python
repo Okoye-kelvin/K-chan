@@ -1,0 +1,13 @@
+class Parent:
+    def func1(self,houses, cars, lands):
+
+        print('this is a parent function')
+
+
+class child(Parent):
+    def func2(self,clothes, toys, books):
+        print('this is a child function')
+
+ob=child()
+ob.func1()
+ob.func2()
