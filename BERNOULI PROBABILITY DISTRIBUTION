@@ -1,0 +1,273 @@
+
+#include <iostream>
+#include <math.h>
+#include <stdlib.h>
+
+using namespace std;
+void Ber_Distribution();
+void Ber_Mean();
+void Ber_Variance();
+void Ber_SD();
+void Ber_CV();
+
+
+int main(){
+	system("cls");
+	cout<<"		---------------------------------------------------------"<<endl;
+	cout<<"			 BERNOULI PROBABILITY DISTRIBUTION"<<endl;
+	cout<<"		---------------------------------------------------------"<<endl;
+	cout<<"<NB> A condition is bernouli if you can have just one trial having a result of either a Success or Failure"<<endl;
+	cout<<"		MENU: "<<endl;
+	cout<<"			1. calculate bernouli ditribution"<<endl;
+	cout<<"			2. Bernouli Mean"<<endl;
+	cout<<"			3. Variance of Bernouli "<<endl;
+	cout<<"			4. Standard deviation of bernoui"<<endl;
+	cout<<"			5. Coeffient of  variation\n"<<endl;
+	cout<<"			6. Exit..."<<endl;
+	cout<<"-----------------------------------------------------------------------"<<endl;
+	sub:
+	cout<<"Make your choice."<<endl;
+	int input;
+	cin>>input;
+	switch(input){
+	
+	
+		case 1:
+			Ber_Distribution();
+			break;
+		
+		case 2:
+			Ber_Mean();
+			break;
+		
+		case 3:
+			Ber_Variance();
+			break;
+		
+		case 4:
+			Ber_SD();
+			break;
+			
+		case 5:
+			Ber_CV();
+			break;
+			
+		case 6: 
+			exit(EXIT_SUCCESS);
+			
+		default:
+			cout<<"you've made a wrong choice."<<endl;
+	}		goto sub;
+	
+}
+	void Ber_Distribution(){
+		system("cls");
+		cout<<"		..........BERNOULI DISTRIBUTION...........\n"<<endl;
+		cout<<"The Formula to finding Bernouli Distribution:"<<endl;
+		cout<<"[ p ^ x ( 1 - p) ^ 1 - x ]\n";
+		cout<<"	where:"<<endl;
+		cout<<"		P = probability given"<<endl;
+		cout<<"		X =  Number of Trials\n"<<endl;
+		float probability;
+		cout<<"Input the probability provided:"<<endl;	
+		cin>>probability;
+		float num_trial;
+		cout<<"Input number of trials"<<endl;
+		cin>>num_trial;
+		float ber =  pow(probability,num_trial) * pow( (1 - probability), 1-num_trial);  
+		cout<<"BERNOULI = "<<ber<<endl;
+		cout<<"-----------------------------------------------------------------------\n"<<endl;
+		sub:
+    int ber_menu;
+    cout<<"1. Calculate Again"<<endl;
+    cout<<"2. Go Back to Main Menu"<<endl;
+    cout<<"3. Exit This Page \n\n"<<endl;
+    cout<<"Give an Input: "<<endl;
+    cin>>ber_menu;
+		
+	switch(ber_menu)
+		{
+		case 1:
+			Ber_Distribution();
+			break;
+		
+		case 2:
+			main();
+			break;
+		
+		case 3:
+			exit(EXIT_SUCCESS);
+			break;
+		
+		default:
+			cout<<"you've made a wrong choice."<<endl;
+			goto sub;
+			break;
+	}
+	
+	}
+	void Ber_Mean()
+	{
+		system("cls");
+		cout<<"		............BERNOULI MEAN..........."<<endl;
+		cout<<"Formula for finding Bernouli mean is provided below"<<endl;
+		cout<<" Mean = P "<<endl;
+		cout<<"		*I.E the mean is it probability*"<<endl;
+		float Probability;
+		cout<<"Probability:"<<endl;
+		cin>>Probability;
+		float mean = Probability;
+		cout<<"MEAN X = "<<mean<<endl;
+		cout<<"-----------------------------------------------------------------------\n"<<endl;
+			sub:
+    int ber_menu;
+    cout<<"1. Calculate Again"<<endl;
+    cout<<"2. Go Back to Main Menu"<<endl;
+    cout<<"3. Exit This Page \n\n"<<endl;
+    cout<<"Give an Input to continue: "<<endl;
+    cin>>ber_menu;
+		
+	switch(ber_menu)
+		{
+		case 1:
+			Ber_Mean();
+			break;
+		
+		case 2:
+			main();
+			break;
+		
+		case 3: 
+			exit(EXIT_SUCCESS);
+			break;
+			
+		default:
+			cout<<"you've made a wrong choice."<<endl;
+			goto sub;
+			break;
+		
+	}
+}
+void Ber_Variance(){
+	system("cls");
+	cout<<"		..........BERNOULI VARIANCE..........\n"<<endl;
+	cout<<"The formula for finding the Variance of a bernouli distribution is provided below\n"<<endl;
+	cout<<"Variance = P ( 1 - P)\n"<<endl;
+	float Probability;
+	cout<<"Input your probability"<<endl;
+	cin>> Probability;
+	float Variance = Probability * (1 - Probability);
+	cout<<"VARIANCE = "<<Variance<<endl;
+	cout<<"-----------------------------------------------------------------------\n"<<endl;
+	sub:
+    int ber_menu;
+    cout<<"1. Calculate Again"<<endl;
+    cout<<"2. Go Back to Main Menu"<<endl;
+    cout<<"3. Exit This Page \n\n"<<endl;
+    cout<<"Give an Input to continue: "<<endl;
+    cin>>ber_menu;
+		
+	switch(ber_menu)
+		{
+		case 1:
+			Ber_Variance();
+			break;
+		
+		case 2:
+			main();
+			break;
+		
+		case 3:
+				exit(EXIT_SUCCESS);
+				break;
+			
+		default:
+			cout<<"you've made a wrong choice."<<endl;
+			goto sub;
+			break;
+	}
+}
+	void Ber_SD(){
+		system("cls");
+		cout<<"STANDARD DEVIATION"<<endl;
+		cout<<"The formula for finding the standard deviation of a bernouli distribution \n"<<endl;
+		cout<<"Standard deviation = square root of variance"<<endl;
+		float Variance;
+		cout<<"Input your Variance"<<endl;
+		cin>>Variance;
+		
+		float S_deviation = sqrt(Variance);
+		cout<<"STANDARD DEVIATION = "<<S_deviation<<endl;
+		cout<<"-----------------------------------------------------------------------\n"<<endl;
+				sub:
+    int ber_menu;
+    cout<<"1. Calculate Again"<<endl;
+    cout<<"2. Go Back to Main Menu"<<endl;
+    cout<<"3. Exit This Page \n\n"<<endl;
+    cout<<"Give an Input to continue: "<<endl;
+    cin>>ber_menu;
+		
+	switch(ber_menu)
+		{
+		
+		case 1:
+			Ber_SD();
+			break;
+			
+		case 2:
+			main();
+			break;
+		
+		case 3: 
+			exit(EXIT_SUCCESS);
+			break;
+			
+		default:
+			cout<<"you've made a wrong choice."<<endl;
+			goto sub;
+			break;
+	}
+}
+	void Ber_CV(){
+		system("cls");
+		cout<<"COEFFICIENT VARIATION"<<endl;
+		cout<<"		The formula for fiinding the coefficient of Variation is\n"<<endl;
+		cout<<"C.V = (standard deviation/mean) * 100 "<<endl;
+		float S_D;
+		cout<<"input your standard deviation:"<<endl;
+		cin>>S_D;
+		float mean;
+		cout<<"input your mean:"<<endl;	
+		cin>>mean;
+		float C_variation = (S_D/mean) * 100;
+		cout<<"COEFFICIENT OF VARIATION = "<<C_variation;
+		cout<<"-----------------------------------------------------------------------\n"<<endl;
+				sub:
+    int ber_menu;
+    cout<<"1. Calculate Again"<<endl;
+    cout<<"2. Go Back to Main Menu"<<endl;
+    cout<<"3. Exit This Page \n\n"<<endl;
+    cout<<"Give an Input to continue: "<<endl;
+    cin>>ber_menu;
+		
+	switch(ber_menu)
+		{
+		case 1:
+			Ber_SD();
+			break;
+			
+		case 2:
+			main();
+			break;
+		
+		case 3: 
+			exit(EXIT_SUCCESS);
+			break;
+			
+		default:
+			cout<<"you've made a wrong choice."<<endl;
+			goto sub;
+			break;
+	}
+		
+};
