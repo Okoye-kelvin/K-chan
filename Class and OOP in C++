@@ -1,0 +1,25 @@
+#include <iostream>
+#include <math.h>
+
+using namespace std;
+
+// calculating the centripetal force of an object moving in a cyclic path:
+
+class centripetalForce{
+public:
+	double calculateCF (double Mass , double Velocity, double Radius){
+	return Mass * pow(Velocity,2) / Radius;
+	
+}
+
+};
+
+int main(){
+	centripetalForce car;
+	// car is an example of an object moving in a cyclic path:
+	
+	cout<<car.calculateCF(); // input your Mass, Velocity, Radius into the bracket e.g 100,20,10 :
+
+	
+	return 0;
+}
