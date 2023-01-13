@@ -1,0 +1,34 @@
+#include <iostream>
+
+using namespace std;
+
+//having multiple classes:
+
+class Power{
+public:
+	double calculatePw (double Work , double Time){
+	return Work / Time;
+	
+}
+
+};
+class Momentum{
+	public:
+		double calculateP (double mass, double velocity){
+			return mass * velocity;
+		}
+};
+
+int main(){
+	
+	//Power pw:
+	Power Man;
+	cout<<"POWER (Js) = "<<Man.calculatePw()<<endl; // input the values for work and time into the bracket: 
+	
+	//Momentum:
+	Momentum Gun;	
+	cout<<"MOMENTUM (kg/m^2) = "<<Gun.calculateP()<<endl;// input values for mass and velocity into the bracket:
+
+	
+	return 0;
+}
