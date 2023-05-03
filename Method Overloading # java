@@ -1,0 +1,113 @@
+import java.util.Scanner;
+
+import static java.lang.Math.pow;
+
+public class Energy extends Physics {
+    static double kineticEnergy() {
+        System.out.println("\t \t .....KINETIC ENERGY......");
+
+
+        Scanner input = new Scanner(System.in);
+
+        System.out.println("Input Mass");
+        double Mass = input.nextDouble();
+
+
+        System.out.println("Input Velocity");
+        double Velocity = input.nextDouble();
+
+        System.out.println("KineticEnergy = " + Mass * pow(Velocity,2) / 2);
+
+        return  (Mass * pow(Velocity,2))/2;
+    }
+
+
+    static double PotentialEnergy() {
+        System.out.println("\t \t .......POTENTIAL ENERGY......");
+
+        Scanner input = new Scanner(System.in);
+
+        System.out.println("Input Mass");
+        double Mass = input.nextDouble();
+
+
+        System.out.println("Input Gravity");
+        double Gravity = input.nextDouble();
+
+        System.out.println("Input Height");
+        double Height = input.nextDouble();
+
+
+        System.out.println( "PotentialEnergy = " + Mass * Gravity * Height );
+        return  Mass * Gravity * Height;
+    }
+    static double Force() {
+        System.out.println("\t \t ......FORCE......");
+
+
+        Scanner input = new Scanner(System.in);
+
+        System.out.println("Input Mass");
+        double Mass = input.nextDouble();
+
+
+        System.out.println("Input Acceleration");
+        double Acceleration = input.nextDouble();
+
+
+        System.out.println( "Force = " + Mass * Acceleration );
+
+        return  Mass * Acceleration;
+    }
+    static double Momentum() {
+        System.out.println("\t \t .....MOMENTUM.....");
+
+
+        Scanner input = new Scanner(System.in);
+
+        System.out.println("Input Mass");
+        double Mass = input.nextDouble();
+
+
+        System.out.println("Input Velocity");
+        double Velocity = input.nextDouble();
+
+
+
+        System.out.println( "KineticEnergy = " + Mass * Velocity);
+
+        return  Mass * Velocity;
+    }
+    static double CentriputalForce() {
+        System.out.println("\t \t ......CENTRIPUTAL FORCE......");
+
+
+        Scanner input = new Scanner(System.in);
+
+        System.out.println("Input Mass");
+        double Mass = input.nextDouble();
+
+
+        System.out.println("Input Velocity");
+        double Velocity = input.nextDouble();
+
+        System.out.println("Input Radius");
+        double Radius = input.nextDouble();
+
+
+        System.out.println( "KineticEnergy = " +  Mass * pow(Velocity,2) * Radius );
+
+        return  Mass * pow(Velocity,2) * Radius;
+    }
+
+
+
+    public static void main(String[] args) {
+        kineticEnergy();
+        PotentialEnergy();
+        Force();
+        Momentum();
+        CentriputalForce();
+
+    }
+}
